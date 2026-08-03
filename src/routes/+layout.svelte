@@ -7,7 +7,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 {#if data.user}
-	<div class="layout 8:p-4 w-full *:border-gray-300 *:p-4">
+	<div class="layout 8:p-4 min-h-dvh w-full *:border-gray-300 *:p-4">
 		<aside class="team flex items-center border-r border-b">Sip&apos;s team</aside>
 		<header class="head flex items-center justify-between border-b">
 			Navigation 'n stuff

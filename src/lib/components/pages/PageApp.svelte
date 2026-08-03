@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Button from '../Button.svelte';
-	import Card from '../Card.svelte';
+	import Button from "../Button.svelte";
+	import Card from "../Card.svelte";
 
 	type Props = {
-		user: NonNullable<App.Locals['user']>;
+		user: NonNullable<App.Locals["user"]>;
 	};
 
 	const { user }: Props = $props();
@@ -13,7 +13,7 @@
 	<h1 class="text-3xl">Welcome back, {user.username}</h1>
 
 	<div class="grid grid-cols-1 gap-4 @min-2xl:grid-cols-2 @min-5xl:grid-cols-3">
-		{#each { length: 6 } as _, i (i)}
+		{#each { length: 3 } as _, i (i)}
 			<Card>
 				{#snippet header()}
 					<h2 class="font-medium">Website</h2>
@@ -21,12 +21,12 @@
 				{/snippet}
 
 				<ul
-					class="*-li:grid *-li:gap-2 *-li:grid-cols-[8ch_1fr_4ch] *-.usage:items-stretch *-.usage:flex flex w-full flex-col gap-4 font-mono"
+					class="*-li:grid *-li:gap-2 *-li:grid-cols-[8ch_1fr_4ch] *-.usage:items-stretch flex w-full flex-col gap-4 font-mono"
 				>
 					<li>
 						<span>CPU</span>
 						<!-- TODO: organize this and make it so that we have the dotted pattern for the unfilled area -->
-						<div class="usage">
+						<div class="flex">
 							<span>[</span>
 							<div class="grow bg-black/15">
 								<div class="h-full w-1/3 bg-black"></div>
@@ -37,7 +37,7 @@
 					</li>
 					<li class="text-red-600">
 						<span>RAM (!)</span>
-						<div class="usage">
+						<div class="flex">
 							<span>[</span>
 							<div class="grow bg-black/15">
 								<div class="h-full w-full bg-red-600"></div>
@@ -48,7 +48,7 @@
 					</li>
 					<li>
 						<span>DISK</span>
-						<span class="usage">
+						<span class="flex">
 							<span>[</span>
 							<div class="grow bg-black/15">
 								<div class="h-full w-1/2 bg-black"></div>
