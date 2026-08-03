@@ -21,12 +21,12 @@
 				{/snippet}
 
 				<ul
-					class="*-li:grid *-li:gap-2 *-li:grid-cols-[8ch_1fr_4ch] *-.usage:items-stretch flex w-full flex-col gap-4 font-mono"
+					class="flex w-full flex-col gap-4 font-mono [&_li]:grid [&_li]:grid-cols-[8ch_1fr_4ch] [&_li]:gap-2"
 				>
 					<li>
 						<span>CPU</span>
 						<!-- TODO: organize this and make it so that we have the dotted pattern for the unfilled area -->
-						<div class="flex">
+						<div class="flex items-stretch">
 							<span>[</span>
 							<div class="grow bg-black/15">
 								<div class="h-full w-1/3 bg-black"></div>
@@ -37,7 +37,7 @@
 					</li>
 					<li class="text-red-600">
 						<span>RAM (!)</span>
-						<div class="flex">
+						<div class="flex items-stretch">
 							<span>[</span>
 							<div class="grow bg-black/15">
 								<div class="h-full w-full bg-red-600"></div>
@@ -48,7 +48,7 @@
 					</li>
 					<li>
 						<span>DISK</span>
-						<span class="flex">
+						<span class="flex items-stretch">
 							<span>[</span>
 							<div class="grow bg-black/15">
 								<div class="h-full w-1/2 bg-black"></div>
