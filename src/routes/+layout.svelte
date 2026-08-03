@@ -7,14 +7,14 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 {#if data.user}
-	<div class="layout 8:p-4 min-h-dvh w-full *:border-gray-300 *:p-4">
-		<aside class="team flex items-center border-r border-b">Sip&apos;s team</aside>
-		<header class="head flex items-center justify-between border-b">
+	<div class="layout min-h-dvh w-full *:border-gray-300 *:p-4">
+		<aside class="team flex items-center border-r border-b bg-gray-50">Sip&apos;s team</aside>
+		<header class="head flex items-center justify-between border-b bg-gray-50">
 			Navigation 'n stuff
 			<span class="font-bold">Logged in</span>
 		</header>
-		<nav class="nav border-r">Sidebar 'n stuff</nav>
-		<main class="app p-6!">
+		<nav class="nav border-r bg-gray-50">Sidebar 'n stuff</nav>
+		<main class="app p-7!">
 			{@render children()}
 		</main>
 	</div>
