@@ -1,42 +1,15 @@
-# sv
+# Zero Panel
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-bun x sv@0.17.0 create --template minimal --types ts --add eslint prettier tailwindcss="plugins:none" drizzle="database:postgresql+postgresql:postgres.js+docker:yes" sveltekit-adapter="adapter:node" --install bun .
-```
+Zero is a service management panel meant for deploying services, games, and other
+general-purpose workloads. It's written in Go and SvelteKit and has a sleek and
+intuitive UI with a focus on flexibility, speed and security at the forefront.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Starting the dev environment
+
+Make sure you have `overmind` installed and use:
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+overmind start
 ```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
