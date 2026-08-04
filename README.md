@@ -23,9 +23,10 @@ and to start the web-server:
 bun run dev
 ```
 
-## [W.I.P.] Road map
+## [W.I.P.] Roadmap
 
 This project is very early in development, but here's the rough outline of tasks I need to do:
+
 - [ ] Authentication
 - [ ] Connection to Daemon
 - [ ] Interactivity
