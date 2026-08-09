@@ -1,6 +1,6 @@
 <script lang="ts">
-	import App from "./PageApp.svelte";
-	import Home from "./PageHome.svelte";
+	import App from "./App.svelte";
+	import Home from "./Home.svelte";
 
 	let { data } = $props();
 </script>
