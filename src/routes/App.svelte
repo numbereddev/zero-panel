@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from "$lib/components/Button.svelte";
 	import Card from "$lib/components/Card.svelte";
+	import Progress from "$lib/components/Progress.svelte";
 
 	type Props = {
 		user: NonNullable<App.Locals["user"]>;
@@ -27,38 +28,13 @@
 					class="flex w-full flex-col gap-4 font-mono [&_li]:grid [&_li]:grid-cols-[8ch_1fr_4ch] [&_li]:gap-2"
 				>
 					<li>
-						<span>CPU</span>
-						<!-- TODO: organize this and make it so that we have the dotted pattern for the unfilled area -->
-						<div class="flex items-stretch">
-							<span>[</span>
-							<div class="grow bg-black/15">
-								<div class="h-full w-1/3 bg-black"></div>
-							</div>
-							<span>]</span>
-						</div>
-						<span class="text-right">30%</span>
+						<Progress name="CPU" progress={0.3} />
 					</li>
 					<li class="text-red-600">
-						<span>RAM (!)</span>
-						<div class="flex items-stretch">
-							<span>[</span>
-							<div class="grow bg-black/15">
-								<div class="h-full w-full bg-red-600"></div>
-							</div>
-							<span>]</span>
-						</div>
-						<span class="text-right">100%</span>
+						<Progress name="RAM" progress={1} warning />
 					</li>
 					<li>
-						<span>DISK</span>
-						<span class="flex items-stretch">
-							<span>[</span>
-							<div class="grow bg-black/15">
-								<div class="h-full w-1/2 bg-black"></div>
-							</div>
-							<span>]</span>
-						</span>
-						<span class="text-right">50%</span>
+						<Progress name="Disk" progress={0.5} />
 					</li>
 				</ul>
 
