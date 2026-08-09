@@ -14,7 +14,7 @@
 			<span class="font-bold">Logged in</span>
 		</header>
 		<nav class="nav border-r bg-gray-50">Sidebar 'n stuff</nav>
-		<main class="app p-7!">
+		<main class="app p-12!">
 			{@render children()}
 		</main>
 	</div>

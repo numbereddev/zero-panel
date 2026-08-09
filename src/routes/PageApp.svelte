@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "../Button.svelte";
-	import Card from "../Card.svelte";
+	import Button from "$lib/components/Button.svelte";
+	import Card from "$lib/components/Card.svelte";
 
 	type Props = {
 		user: NonNullable<App.Locals["user"]>;
@@ -9,9 +9,12 @@
 	const { user }: Props = $props();
 </script>
 
-<div class="@container">
-	<h1 class="text-3xl">Welcome back, {user.username}</h1>
+<h1 class="text-3xl">Welcome back, {user.username}</h1>
+<section id="groups">
+	<h1 class="mono uppercase">Groups</h1>
+</section>
 
+<section id="instances" class="@container">
 	<div class="grid grid-cols-1 gap-4 @min-2xl:grid-cols-2 @min-5xl:grid-cols-3">
 		{#each { length: 3 } as _, i (i)}
 			<Card>
@@ -66,4 +69,4 @@
 			</Card>
 		{/each}
 	</div>
-</div>
+</section>

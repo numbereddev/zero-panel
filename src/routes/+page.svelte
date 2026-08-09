@@ -1,6 +1,6 @@
 <script lang="ts">
-	import App from '$lib/components/pages/PageApp.svelte';
-	import Home from '$lib/components/pages/PageHome.svelte';
+	import App from "./PageApp.svelte";
+	import Home from "./PageHome.svelte";
 
 	let { data } = $props();
 </script>
